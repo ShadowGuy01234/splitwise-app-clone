@@ -20,7 +20,21 @@ export default function App() {
             }}
             component={HomeScreen}
           />
-          <Stack.Screen name="Profile" />
+          <Stack.Screen
+            name="Profile"
+            options={{
+              headerStyle: {
+                backgroundColor: "lightblue",
+                color: "white",
+              },
+              headerTitle: "",
+              headerBack: () => {
+                return null;
+              },
+              headerBackVisible: false,
+            }}
+            component={ProfileScreen}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
@@ -33,10 +47,13 @@ function HomeScreen() {
   const handleNavigation = () => {
     navigation.navigate("Profile");
   };
-  
+
   return (
     <View>
       <Text>Home Screen</Text>
+      <Pressable onPress={handleNavigation}>
+        <Text>Go to Profile</Text>
+      </Pressable>
     </View>
   );
 }
