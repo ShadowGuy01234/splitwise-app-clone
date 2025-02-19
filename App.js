@@ -1,13 +1,14 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import Account from "./screens/ProfileScreen";
 import GroupScreen from "./screens/GroupScreen";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Activity from "./ActivityScreen";
 import Friends from "./screens/FriendScreen";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Entypo from "@expo/vector-icons/Entypo";
+import Fontisto from "@expo/vector-icons/Fontisto";
 
 const Tab = createBottomTabNavigator();
 
@@ -15,7 +16,29 @@ export default function App() {
   return (
     <>
       <NavigationContainer>
-        <Tab.Navigator>
+        <Tab.Navigator
+          screenOptions={{
+            tabBarStyle: {
+              height: 60,
+            },
+            headerTitle: "",
+            headerRight: () => {
+              return (
+                <>
+                  <AntDesign name="addusergroup" size={24} color="black" />
+                  <Fontisto
+                    name="search"
+                    size={24}
+                    color="black"
+                    style={{
+                      margin: 10,
+                    }}
+                  />
+                </>
+              );
+            },
+          }}
+        >
           <Tab.Screen
             name="Group"
             component={GroupScreen}

@@ -24,9 +24,7 @@ export default function GroupScreen({title, amount}) {
         <GroupCard title='3' expense = '110' />
         <GroupCard title='4' expense = '200' />
         
-        <View style={{
-            // width: 50,
-        }}>
+        <View>
             <Pressable style={{
             flexDirection: "row",
             gap: 5,
@@ -52,7 +50,7 @@ export default function GroupScreen({title, amount}) {
             borderRadius: 50,
             paddingVertical: 5,
             left: 200,
-            top: 110
+            top: 180,
         }}>
             <FontAwesome6 name="add" size={24} color="white" />
             <Text style={{

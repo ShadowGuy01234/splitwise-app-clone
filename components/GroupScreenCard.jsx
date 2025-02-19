@@ -9,7 +9,7 @@ export default function GroupCard({title, expense}){
             margin: 10,
             alignItems: "center",
         }}>
-            <Image source={require('../assets/group_image.jpg')} style={{ height: 80, width: 100, borderRadius: 10 }}/>
+            <Image source={require('../assets/group_image.jpg')} style={{ height: 60, width: 80, borderRadius: 10 }}/>
             <View>
                 <Text style={{
                     fontSize: 20,
