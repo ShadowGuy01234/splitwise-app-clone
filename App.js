@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import Account from "./screens/ProfileScreen";
 import GroupScreen from "./screens/GroupScreen";
-import Activity from "./ActivityScreen";
+import Activity from "./screens/ActivityScreen";
 import Friends from "./screens/FriendScreen";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Entypo from "@expo/vector-icons/Entypo";
