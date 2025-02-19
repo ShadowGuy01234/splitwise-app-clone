@@ -2,9 +2,9 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./screens/HomeScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import Feather from "@expo/vector-icons/Feather";
-
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -49,42 +49,6 @@ export default function App() {
   );
 }
 
-function HomeScreen() {
-  const navigation = useNavigation();
-
-  const handleNavigation = () => {
-    navigation.navigate("Profile");
-  };
-
-  return (
-    <View style={{
-      flex: 1,
-      justifyContent:"center",
-      alignItems: "center",
-    }} >
-      <Text>Home Screen</Text>
-      <Pressable
-        onPress={handleNavigation}
-        style={{
-          backgroundColor: "blue",
-          height: 50,
-          width: 200,
-          borderRadius: 50,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Text
-          style={{
-            color: "white",
-          }}
-        >
-          Go to Profile
-        </Text>
-      </Pressable>
-    </View>
-  );
-}
 
 const styles = StyleSheet.create({
   container: {
