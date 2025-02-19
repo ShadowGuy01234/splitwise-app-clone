@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Pressable } from "react-native";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ProfileScreen from "./screens/ProfileScreen";
+import Feather from "@expo/vector-icons/Feather";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,13 @@ export default function App() {
                 return null;
               },
               headerBackVisible: false,
+              headerRight: () => {
+                return (
+                  <Pressable>
+                    <Feather name="search" size={24} color="black" />
+                  </Pressable>
+                );
+              },
             }}
             component={ProfileScreen}
           />
@@ -49,10 +57,30 @@ function HomeScreen() {
   };
 
   return (
-    <View>
+    <View style={{
+      flex: 1,
+      justifyContent:"center",
+      alignItems: "center",
+    }} >
       <Text>Home Screen</Text>
-      <Pressable onPress={handleNavigation}>
-        <Text>Go to Profile</Text>
+      <Pressable
+        onPress={handleNavigation}
+        style={{
+          backgroundColor: "blue",
+          height: 50,
+          width: 200,
+          borderRadius: 50,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Text
+          style={{
+            color: "white",
+          }}
+        >
+          Go to Profile
+        </Text>
       </Pressable>
     </View>
   );
