@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View, ScrollView } from "react-native";
 import ActivityScreenCard from "../components/ActivityScreenCard";
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
@@ -6,6 +6,7 @@ import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 export default function Activity(){
     return (
         <>
+        <ScrollView>
         <View style={{
             flexDirection: "row",
             margin: 10,
@@ -19,9 +20,18 @@ export default function Activity(){
         <ActivityScreenCard person={2} group={'abcd'}/>
         <ActivityScreenCard person={'Cool'} group={4}/>
         <ActivityScreenCard person={'Demn'} group={'hello'}/>
+        <ActivityScreenCard person={'Demn'} group={'hello'}/>
+        <ActivityScreenCard person={'Demn'} group={'hello'}/>
+        <ActivityScreenCard person={'Demn'} group={'hello'}/>
+        <ActivityScreenCard person={'Demn'} group={'hello'}/>
+        <ActivityScreenCard person={'Demn'} group={'hello'}/>
+        <ActivityScreenCard person={'Demn'} group={'hello'}/>
+
             
+            {/* Position Hardcoded Button */}
         <View>
             <Pressable style={{
+            position: "fixed",
             flexDirection: "row",
             gap: 8,
             alignItems: "center",
@@ -31,7 +41,6 @@ export default function Activity(){
             borderRadius: 50,
             paddingVertical: 5,
             left: 200,
-            top: 180,
         }}>
             <FontAwesome6 name="add" size={24} color="white" />
             <Text style={{
@@ -39,7 +48,8 @@ export default function Activity(){
                 color: "white"
             }}>Add expense</Text>
             </Pressable>
-        </View>    
+        </View>  
+        </ScrollView>  
         </>
     )
 }

@@ -40,6 +40,8 @@ export default function Friends(){
                 <Text>Add new Friends</Text>
             </Pressable>
         </View>
+
+        {/* Position Hardcoded Button */}
         <View>
             <Pressable style={{
             flexDirection: "row",

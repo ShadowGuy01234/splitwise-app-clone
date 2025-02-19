@@ -39,6 +39,8 @@ export default function GroupScreen({title, amount}) {
                 <Text>Start a new Group</Text>
             </Pressable>
         </View>
+                    {/* Position Hardcoded Button */}
+
         <View>
             <Pressable style={{
             flexDirection: "row",
