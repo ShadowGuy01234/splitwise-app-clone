@@ -32,9 +32,10 @@ export default function ActivityScreenCard({person, group}) {
                 justifyContent: "center",
                 fontSize: 19,
                 fontWeight: 500,
-                top: -20
+                top: -20,
             }}>
-                Person {person} added "Group {group}"
+                Person {person} added "Group {group}" {"\n"}  
+            <Text>12/12/12</Text>
             </Text>
         </View>
         </View>
