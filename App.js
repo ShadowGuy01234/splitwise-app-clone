@@ -5,50 +5,23 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./screens/HomeScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import Feather from "@expo/vector-icons/Feather";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            options={{
-              headerStyle: {
-                backgroundColor: "lightblue",
-              },
-            }}
-            component={HomeScreen}
-          />
-          <Stack.Screen
-            name="Profile"
-            options={{
-              headerStyle: {
-                backgroundColor: "lightblue",
-                color: "white",
-              },
-              headerTitle: "",
-              headerBack: () => {
-                return null;
-              },
-              headerBackVisible: false,
-              headerRight: () => {
-                return (
-                  <Pressable>
-                    <Feather name="search" size={24} color="black" />
-                  </Pressable>
-                );
-              },
-            }}
-            component={ProfileScreen}
-          />
-        </Stack.Navigator>
+        <Tab.Navigator>
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="Profile" component={ProfileScreen} />
+        </Tab.Navigator>
       </NavigationContainer>
     </>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
