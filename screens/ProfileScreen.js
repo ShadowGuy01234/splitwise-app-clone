@@ -6,7 +6,7 @@ import EvilIcons from "@expo/vector-icons/EvilIcons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
-function ProfileScreen() {
+function Account() {
   return (
     <>
       <View>
@@ -257,4 +257,4 @@ function ProfileScreen() {
   );
 }
 
-export default ProfileScreen;
+export default Account;
